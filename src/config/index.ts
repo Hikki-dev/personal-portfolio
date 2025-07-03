@@ -58,10 +58,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Self-Hosted Media Stack",
-      summary: "’ve deployed and managed a full self-hosted stack using Docker Compose and Portainer on a virtualized server. The setup includes:
-      "Media apps: Sonarr, Radarr, Jellyfin, qBittorrent, Prowlarr, etc.",
-      "Admin tools: FileBrowser, Heimdall, Code-Server",
-      "Reverse-proxied with Caddy, remotely accessible via Tailscale",
+      summary: "I’ve deployed and managed a full self-hosted stack using Docker Compose and Portainer on a virtualized server.",
       linkPreview: "/",
       linkSource: "https://github.com/Hikki-dev/SDAM-OOP",
       image: "/shopify-clon.png",
