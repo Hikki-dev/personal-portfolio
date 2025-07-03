@@ -28,6 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     summary:
        "A Full Stack Developer based in Sri Lanka, specializing in maintaining aesthetically pleasing websites that deliver top performance, while nurturing a strong passion for cybersecurity.",
     email: "yusuffinam@gmail.com",
+    cvLink: "/cv.pdf",
   },
   experience: [
     {
