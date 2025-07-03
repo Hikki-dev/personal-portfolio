@@ -59,9 +59,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Self-Hosted Media Stack",
       summary: "I’ve deployed and managed a full self-hosted stack using Docker Compose and Portainer on a virtualized server.",
-      linkPreview: "/",
-      linkSource: "https://github.com/Hikki-dev/SDAM-OOP",
-      image: "/shopify-clon.png",
+      linkSource: "https://github.com/Hikki-dev/docker-stacks",
+      image: "/Portainer.png",
+    },
+    {
+      name: "Proxmox Virtual Lab",
+      summary: "My home lab is powered by Proxmox VE, where I manage multiple VMs and containers across different OS platforms",
+      image: "/Proxmox.png",
     },
   ],
   about: {
