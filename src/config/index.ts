@@ -18,7 +18,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Github", href: "https://github.com/Hikki-dev" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://hik-dev.vercel.app/",
 };
 
 export const SITE_CONTENT: SiteContent = {
