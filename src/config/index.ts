@@ -70,7 +70,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-   Hi, I’m Yusuf, a freshman at APIIT currently pursuing a degree on Software Engineering. I specialize in Python, JavaScript and C#, while actively improving a HomeLAB and CyberSecurity Skills. My projects range from self-hosted media servers, to developing a Course Management System.  
+   Hi, I’m Yusuf, a freshman at APIIT currently pursuing a degree on Software Engineering. I specialize in Flutter, Python, JavaScript and C#, while actively improving a HomeLAB and CyberSecurity Skills. My projects range from self-hosted media servers, to developing a Mobile App.  
     `,
     image: "/Yusuf-big.jpeg",
   },
