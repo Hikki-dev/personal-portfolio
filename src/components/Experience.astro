@@ -1,0 +1,180 @@
+---
+import Section from "./Section.astro";
+import type { ExperienceProps } from "@types";
+
+interface Props {
+  experience: ExperienceProps[];
+}
+
+const { experience } = Astro.props;
+---
+
+<Section text="What I Bring to the Table" href="experience">
+  <div
+    class="mb-12 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-blue-500/5 p-6"
+  >
+    <h3 class="mb-4 font-serif text-xl font-semibold text-white">
+      Ready for Immediate Impact
+    </h3>
+    <p class="text-neutral leading-relaxed">
+      While seeking my first professional role, I've been building
+      production-ready systems, managing real infrastructure, and delivering
+      results ahead of schedule. I don't just write code—I solve problems.
+    </p>
+  </div>
+
+  <div class="grid gap-8 md:grid-cols-2">
+    <!-- Consistent Performance -->
+    <div class="rounded-xl border border-neutral/20 bg-card p-6">
+      <div class="mb-4 flex items-center gap-3">
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10"
+        >
+          <svg
+            class="h-6 w-6 text-primary"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-semibold text-white">
+            Consistent Delivery
+          </h4>
+          <p class="text-sm text-primary">Reliable and dependable work ethic</p>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm text-neutral">
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Submit all assignments 1-2 weeks early with 100% on-time record
+        </li>
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Maintain personal projects with attention to detail and quality
+        </li>
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Built and manage production infrastructure at home
+        </li>
+      </ul>
+    </div>
+
+    <!-- Technical Capability -->
+    <div class="rounded-xl border border-neutral/20 bg-card p-6">
+      <div class="mb-4 flex items-center gap-3">
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10"
+        >
+          <svg
+            class="h-6 w-6 text-primary"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H5m0 0v-4a2 2 0 012-2h10a2 2 0 012 2v4"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-semibold text-white">
+            Technical Range
+          </h4>
+          <p class="text-sm text-primary">Full-stack capability</p>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm text-neutral">
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Frontend to backend to infrastructure deployment
+        </li>
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Experience with modern tooling (Docker, Git, CI/CD)
+        </li>
+        <li class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"></path>
+          </svg>
+          Cross-platform development (Web, Mobile)
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Current Focus -->
+  <div class="mt-12 rounded-xl border border-green-500/20 bg-green-500/5 p-6">
+    <h3 class="mb-3 font-serif text-lg font-semibold text-white">
+      Currently Seeking: Internship or Entry-Level Position
+    </h3>
+    <p class="text-neutral">
+      Looking for a company that values growth, innovation, and giving talented
+      individuals the opportunity to make meaningful contributions from day one.
+      I bring enthusiasm, reliability, and a proven track record of delivering
+      results.
+    </p>
+  </div>
+</Section>

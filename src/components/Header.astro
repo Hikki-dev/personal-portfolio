@@ -1,0 +1,200 @@
+---
+import Menu from "@/icons/Menu.astro";
+import type { HeaderProps } from "@types";
+
+type Props = HeaderProps;
+
+const { siteLogo, navLinks } = Astro.props;
+---
+
+<header
+  class="sticky top-0 z-50 mx-auto flex max-w-5xl animate-slide-in justify-between bg-black px-5 py-6"
+>
+  <a href="/" aria-label="Home link">
+    <img
+      class="rounded-full"
+      src={siteLogo}
+      width="45"
+      height="45"
+      alt="website logo"
+      loading="lazy"
+      decoding="async"
+    />
+  </a>
+
+  <div class="flex items-center gap-4">
+    {/* Navigation */}
+    <nav class="hidden sm:block">
+      <ul class="flex gap-2">
+        {
+          navLinks.map((link) => (
+            <li class="relative">
+              <a
+                class="nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white text-neutral"
+                href={link.href}
+              >
+                {link.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    {/* Theme Toggle */}
+    <button
+      type="button"
+      id="theme-toggle"
+      class="flex h-10 w-10 items-center justify-center rounded-lg border border-neutral/40 bg-black/50 text-neutral transition-colors hover:bg-neutral/10 hover:text-white"
+      aria-label="Toggle theme"
+    >
+      <svg
+        id="sun-icon"
+        class="h-5 w-5 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          clip-rule="evenodd"></path>
+      </svg>
+
+      <svg
+        id="moon-icon"
+        class="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+        ></path>
+      </svg>
+    </button>
+
+    {/* Mobile Menu Button */}
+    <button
+      type="button"
+      id="menu-button"
+      class="px-1.5 text-neutral sm:hidden"
+      aria-expanded="false"
+      aria-controls="main-menu"
+    >
+      <Menu />
+    </button>
+  </div>
+
+  {/* Mobile Menu */}
+  <nav
+    class="absolute top-20 right-5 hidden rounded-xl border border-neutral/40 bg-black px-4 py-5 text-neutral sm:hidden"
+    id="main-menu"
+  >
+    <ul class="space-y-2">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              class="block p-2 text-sm font-medium text-neutral hover:text-white transition-colors"
+              href={link.href}
+            >
+              {link.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  function initializeHeader() {
+    // Theme toggle functionality
+    const themeToggle = document.getElementById("theme-toggle");
+    const sunIcon = document.getElementById("sun-icon");
+    const moonIcon = document.getElementById("moon-icon");
+    const html = document.documentElement;
+
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    html.setAttribute("data-theme", currentTheme);
+
+    // Update icon based on current theme
+    const updateIcons = (theme: string) => {
+      if (theme === "light") {
+        sunIcon?.classList.add("hidden");
+        moonIcon?.classList.remove("hidden");
+      } else {
+        sunIcon?.classList.remove("hidden");
+        moonIcon?.classList.add("hidden");
+      }
+    };
+
+    updateIcons(currentTheme);
+
+    themeToggle?.addEventListener("click", () => {
+      const currentTheme = html.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      updateIcons(newTheme);
+    });
+
+    // Mobile menu toggle
+    const button = document.querySelector("#menu-button");
+    const menu = document.querySelector("#main-menu");
+    const navItems = document.querySelectorAll("#main-menu a");
+
+    if (!button || !menu) return;
+
+    const toggleMenu = () => {
+      menu.classList.toggle("hidden");
+      const isHidden = menu.classList.contains("hidden");
+      button.setAttribute("aria-expanded", `${!isHidden}`);
+    };
+
+    button.addEventListener("click", toggleMenu);
+    navItems.forEach((item) => {
+      item.addEventListener("click", toggleMenu);
+    });
+
+    // Navigation highlighting
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const allNavItems = document.querySelectorAll(".nav-item");
+            allNavItems.forEach((item) => {
+              if (item.getAttribute("href") === `#${entry.target.id}`) {
+                item.classList.add("text-white", "md:after:opacity-100");
+              } else {
+                item.classList.remove("text-white", "md:after:opacity-100");
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observe sections
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeHeader);
+  } else {
+    initializeHeader();
+  }
+</script>
+
+<style>
+  header {
+    animation-timeline: scroll();
+    animation-range: 0 650px;
+  }
+</style>

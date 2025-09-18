@@ -1,0 +1,74 @@
+---
+import Section from "./Section.astro";
+import type { ProjectProps } from "@types";
+
+interface Props {
+  projects: ProjectProps[];
+}
+
+const { projects } = Astro.props;
+---
+
+<Section text="Featured Projects" href="projects">
+  <div class="grid gap-8 md:grid-cols-2">
+    {
+      projects.map(
+        ({ name, summary, image, linkPreview, linkSource, technologies }) => (
+          <div class="group rounded-xl border border-neutral/20 bg-card p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+            {/* Project Image */}
+            <div class="mb-4 overflow-hidden rounded-lg">
+              <img
+                class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                src={image}
+                alt={name}
+                width="400"
+                height="200"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Project Content */}
+            <h3 class="mb-3 font-serif text-xl font-semibold text-white">
+              {name}
+            </h3>
+
+            <p class="mb-4 text-sm text-neutral leading-relaxed">{summary}</p>
+
+            {/* Technologies - Simple Tags */}
+            {technologies && (
+              <div class="mb-4 flex flex-wrap gap-2">
+                {technologies.map((tech) => (
+                  <span class="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs text-primary">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Simple Links */}
+            <div class="flex gap-3">
+              {linkSource && (
+                <a
+                  href={linkSource}
+                  target="_blank"
+                  class="text-sm text-neutral hover:text-white transition-colors"
+                >
+                  View Code →
+                </a>
+              )}
+              {linkPreview && (
+                <a
+                  href={linkPreview}
+                  target="_blank"
+                  class="text-sm text-primary hover:text-blue-400 transition-colors"
+                >
+                  Live Demo →
+                </a>
+              )}
+            </div>
+          </div>
+        )
+      )
+    }
+  </div>
+</Section>

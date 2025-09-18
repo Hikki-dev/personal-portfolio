@@ -1,0 +1,157 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Font imports */
+@import "@fontsource/be-vietnam-pro";
+@import "@fontsource-variable/gabarito";
+
+/* CSS Custom Properties for themes */
+:root {
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-serif: "Gabarito Variable", ui-serif, serif;
+
+  /* Dark theme colors (default) */
+  --color-primary: #2563eb;
+  --color-neutral: #94a3b8;
+  --color-white: #e2e8f0;
+  --color-black: #0e141b;
+  --color-bg: #0e141b;
+  --color-card: #1c232d;
+}
+
+/* Light theme colors */
+[data-theme="light"] {
+  --color-primary: #2563eb;
+  --color-neutral: #64748b;
+  --color-white: #1e293b;
+  --color-black: #ffffff;
+  --color-bg: #ffffff;
+  --color-card: #f8fafc;
+}
+
+/* Apply theme colors */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Custom utility classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-neutral {
+  color: var(--color-neutral);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-neutral\/20 {
+  border-color: rgb(148 163 184 / 0.2);
+}
+
+.border-primary\/20 {
+  border-color: rgb(37 99 235 / 0.2);
+}
+
+.border-primary\/30 {
+  border-color: rgb(37 99 235 / 0.3);
+}
+
+.bg-primary\/10 {
+  background-color: rgb(37 99 235 / 0.1);
+}
+
+.bg-primary\/5 {
+  background-color: rgb(37 99 235 / 0.05);
+}
+
+/* Update header background for themes */
+header {
+  background-color: var(--color-bg) !important;
+}
+
+/* Animations */
+@keyframes slide-in {
+  10% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 600ms ease both;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typography utilities */
+.tracking-tightest {
+  letter-spacing: -0.05em;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.025em;
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] header {
+  background-color: var(--color-bg) !important;
+  border-bottom: 1px solid rgb(148 163 184 / 0.2);
+}

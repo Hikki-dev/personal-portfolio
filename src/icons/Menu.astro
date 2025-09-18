@@ -1,0 +1,35 @@
+---
+interface Props {
+  class?: string;
+  size?: number;
+  "stroke-width"?: number;
+  "aria-label"?: string;
+  color?: string;
+}
+
+const {
+  class: className = "",
+  size = 24,
+  "stroke-width": strokeWidth = 2,
+  "aria-label": ariaLabel = "Menu",
+  color = "currentColor",
+} = Astro.props;
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke={color}
+  stroke-width={strokeWidth}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={className}
+  role="img"
+  aria-label={ariaLabel}
+>
+  <line x1="3" x2="21" y1="6" y2="6"></line>
+  <line x1="3" x2="21" y1="12" y2="12"></line>
+  <line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
