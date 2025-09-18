@@ -69,6 +69,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "E-commerce Mobile App",
       summary: "Cross-platform luxury watch store app built with Flutter. Features smooth animations, intuitive navigation, and premium shopping experience across iOS and Android.",
+      linkPreview: "https://hik-dev.netlify.app",
       linkSource: "https://github.com/Hikki-dev/WatchApp",
       image: "/WatchApp1.png",
       technologies: ["Flutter", "Dart", "Mobile Development"]
