@@ -80,7 +80,7 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://github.com/Hikki-dev/luxwatch",
       image: "/Watch WEbsite.jpg",
       technologies: ["PHP", "MySQL", "TailwindCSS", "JavaScript"]
-    }
+    },
     {
       name: "OpalX Web Platform",
       summary: "A modern business website built with React, featuring responsive layouts, reusable UI components, and optimized performance for startup branding and product showcasing.",
@@ -88,27 +88,26 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "https://hikki-dev.github.io/OpalX/"
       image: "/opalx.jpg",
       technologies: ["HTML", "CSS", "JavaScript]
-    }
-{
-  name: "Ascend Properties Real Estate Platform",
-  summary: "A full-featured real estate listing system with property search, filtering, admin dashboard, and Firebase backend for dynamic content management.",
-  linkSource: "https://github.com/Hikki-dev/ascendproperties-lk",
-  linkPreview: "https://ascendproperties-lk.vercel.app/"
-  image: "/ascend-properties.jpg",
-  technologies: ["React", "Firebase", "JavaScript", "TailwindCSS"]
-}
-{
-  name: "Buslink Transportation App",
-  summary: "A Flutter-based bus management and live tracking system with Firestore integration, user-friendly UI, and real-time route updates for commuters and admins.",
-  linkSource: "https://github.com/Hikki-dev/Buslink",
-  linkPreview: "https://buslink-eta.vercel.app/"
-  image: "/buslink-app.jpg",
-  technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"]
-}
-
-  ],
-  about: {
-    description: `
+    },
+    {
+      name: "Ascend Properties Real Estate Platform",
+      summary: "A full-featured real estate listing system with property search, filtering, admin dashboard, and Firebase backend for dynamic content management.",
+      linkSource: "https://github.com/Hikki-dev/ascendproperties-lk",
+      linkPreview: "https://ascendproperties-lk.vercel.app/"
+      image: "/ascend-properties.jpg",
+      technologies: ["React", "Firebase", "JavaScript", "TailwindCSS"]
+    },
+    {
+      name: "Buslink Transportation App",
+      summary: "A Flutter-based bus management and live tracking system with Firestore integration, user-friendly UI, and real-time route updates for commuters and admins.",
+      linkSource: "https://github.com/Hikki-dev/Buslink",
+      linkPreview: "https://buslink-eta.vercel.app/"
+      image: "/buslink-app.jpg",
+      technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"]
+    },
+      ],
+      about: {
+      description: `
     I'm not your typical student developer. While pursuing Software Engineering at APIIT, I've been building and maintaining real systems that work reliably. 
     
     My approach is simple: deliver more than expected, ahead of schedule, and always be learning. Whether it's submitting assignments weeks early or ensuring my HomeLab runs smoothly, I believe in doing things right the first time.
