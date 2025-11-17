@@ -67,12 +67,12 @@ export const SITE_CONTENT: SiteContent = {
       technologies: ["Docker", "Proxmox", "Linux", "Networking"]
     },
     {
-      name: "E-commerce Mobile App",
-      summary: "Cross-platform luxury watch store app built with Flutter. Features smooth animations, intuitive navigation, and premium shopping experience across iOS and Android.",
-      linkPreview: "https://hik-dev.netlify.app",
-      linkSource: "https://github.com/Hikki-dev/WatchApp",
-      image: "/WatchApp1.png",
-      technologies: ["Flutter", "Dart", "Mobile Development"]
+      name: "Watch App (Flutter)",
+      summary: "A cross-platform Flutter application for browsing and managing luxury watches with Firebase integration, real-time updates, and a clean responsive UI.",
+      linkSource: "https://github.com/Hikki-dev/Watch-final",
+      linkPreview: "https://watchapp-phi.vercel.app/",
+      image: "/watch-app.jpg",
+      technologies: ["Flutter", "Dart", "Firebase", "Material Design"]
     },
     {
       name: "Full-Stack E-commerce Website",
@@ -81,6 +81,31 @@ export const SITE_CONTENT: SiteContent = {
       image: "/Watch WEbsite.jpg",
       technologies: ["PHP", "MySQL", "TailwindCSS", "JavaScript"]
     }
+    {
+      name: "OpalX Web Platform",
+      summary: "A modern business website built with React, featuring responsive layouts, reusable UI components, and optimized performance for startup branding and product showcasing.",
+      linkSource: "https://github.com/Hikki-dev/OpalX",
+      linkPreview: "https://hikki-dev.github.io/OpalX/"
+      image: "/opalx.jpg",
+      technologies: ["HTML", "CSS", "JavaScript]
+    }
+{
+  name: "Ascend Properties Real Estate Platform",
+  summary: "A full-featured real estate listing system with property search, filtering, admin dashboard, and Firebase backend for dynamic content management.",
+  linkSource: "https://github.com/Hikki-dev/ascendproperties-lk",
+  linkPreview: "https://ascendproperties-lk.vercel.app/"
+  image: "/ascend-properties.jpg",
+  technologies: ["React", "Firebase", "JavaScript", "TailwindCSS"]
+}
+{
+  name: "Buslink Transportation App",
+  summary: "A Flutter-based bus management and live tracking system with Firestore integration, user-friendly UI, and real-time route updates for commuters and admins.",
+  linkSource: "https://github.com/Hikki-dev/Buslink",
+  linkPreview: "https://buslink-eta.vercel.app/"
+  image: "/buslink-app.jpg",
+  technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"]
+}
+
   ],
   about: {
     description: `
