@@ -80,12 +80,13 @@ export const SITE_CONTENT: SiteContent = {
       technologies: ["Flutter", "Dart", "Firebase", "Material Design"],
     },
     {
-      name: "Full-Stack E-commerce Website",
+      name: "Laravel Watch Store",
       summary:
-        "Complete web-based luxury watch store with database integration, user authentication, and modern responsive design using PHP backend and TailwindCSS frontend.",
-      linkSource: "https://github.com/Hikki-dev/luxwatch",
+        "A fully featured luxury watch e-commerce platform built with Laravel, MySQL, and modern responsive UI. Includes user authentication, product browsing, cart, and secure backend workflows. Deployed on Railway with a production-ready database setup.",
+      linkPreview: "https://laravel-watch-production.up.railway.app",
+      linkSource: "https://github.com/Hikki-dev/Laravel-Watch",
       image: "/Watch WEbsite.jpg",
-      technologies: ["PHP", "MySQL", "TailwindCSS", "JavaScript"],
+      technologies: ["Laravel", "PHP", "MySQL", "TailwindCSS", "JavaScript"],
     },
     {
       name: "OpalX Web Platform",
