@@ -54,13 +54,31 @@ export const SITE_CONTENT: SiteContent = {
 
   projects: [
     {
-      name: "Hospital Management System",
+      name: "BusLink Transportation Ecosystem",
       summary:
-        "A complete healthcare management platform with patient appointment booking, secure data handling, and responsive design optimized for all devices.",
-      linkPreview: "https://hikki-dev.github.io/WDOS-Dev/",
-      linkSource: "https://github.com/Hikki-dev/WDOS-Dev",
-      image: "/Hospital.png",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+        "A complex mobility platform featuring three distinct user roles (Admin, Conductor, Commuter). Engineered with real-time location tracking via Google Maps, QR code ticket validation for conductors, and automated refund handling. Includes a comprehensive admin dashboard for route management and revenue analytics.",
+      linkSource: "https://github.com/Hikki-dev/Buslink",
+      linkPreview: "https://buslink-eta.vercel.app/",
+      image: "/buslink-app.jpg",
+      technologies: ["Flutter", "Firebase Cloud Functions", "Stripe Payments", "Google Maps API"],
+    },
+    {
+      name: "Chronos Luxury Marketplace",
+      summary:
+        "A scalable multi-vendor e-commerce platform built with Laravel 11 and Jetstream. Features a sophisticated backend with Stripe Connect for seller payouts, real-time product search using Livewire, and role-based access control. Implements a hybrid architecture serving both web users and a mobile API.",
+      linkPreview: "https://laravel-watch-production.up.railway.app",
+      linkSource: "https://github.com/Hikki-dev/Laravel-Watch",
+      image: "/Watch WEbsite.jpg",
+      technologies: ["Laravel 11", "Livewire", "Stripe Connect", "MySQL", "TailwindCSS"],
+    },
+    {
+      name: "Chronos Mobile (Flutter)",
+      summary:
+        "The mobile companion to the Chronos platform. A high-performance Flutter application that consumes a custom REST API to display real-time inventory. Features complex state management for cart synchronization and utilizes cached network images for optimal performance on low-bandwidth connections.",
+      linkSource: "https://github.com/Hikki-dev/Watch-final",
+      linkPreview: "https://watchapp-phi.vercel.app/",
+      image: "/watch-app.jpg",
+      technologies: ["Flutter", "REST API Integration", "Provider", "Cached Network Image"],
     },
     {
       name: "Production HomeLab Infrastructure",
@@ -71,22 +89,22 @@ export const SITE_CONTENT: SiteContent = {
       technologies: ["Docker", "Proxmox", "Linux", "Networking"],
     },
     {
-      name: "Watch App (Flutter)",
+      name: "Ascend Properties Real Estate",
       summary:
-        "A cross-platform Flutter application for browsing and managing luxury watches with Firebase integration, real-time updates, and a clean responsive UI.",
-      linkSource: "https://github.com/Hikki-dev/Watch-final",
-      linkPreview: "https://watchapp-phi.vercel.app/",
-      image: "/watch-app.jpg",
-      technologies: ["Flutter", "Dart", "Firebase", "Material Design"],
+        "A full-featured real estate listing system with property search, filtering, admin dashboard, and Firebase backend for dynamic content management.",
+      linkSource: "https://github.com/Hikki-dev/ascendproperties-lk",
+      linkPreview: "https://ascendproperties-lk.vercel.app/",
+      image: "/ascend-properties.jpg",
+      technologies: ["React", "Firebase", "JavaScript", "TailwindCSS"],
     },
     {
-      name: "Laravel Watch Store",
+      name: "Hospital Management System",
       summary:
-        "A fully featured luxury watch e-commerce platform built with Laravel, MySQL, and modern responsive UI. Includes user authentication, product browsing, cart, and secure backend workflows. Deployed on Railway with a production-ready database setup.",
-      linkPreview: "https://laravel-watch-production.up.railway.app",
-      linkSource: "https://github.com/Hikki-dev/Laravel-Watch",
-      image: "/Watch WEbsite.jpg",
-      technologies: ["Laravel", "PHP", "MySQL", "TailwindCSS", "JavaScript"],
+        "A complete healthcare management platform with patient appointment booking, secure data handling, and responsive design optimized for all devices.",
+      linkPreview: "https://hikki-dev.github.io/WDOS-Dev/",
+      linkSource: "https://github.com/Hikki-dev/WDOS-Dev",
+      image: "/Hospital.png",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     },
     {
       name: "OpalX Web Platform",
@@ -96,24 +114,6 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "https://hikki-dev.github.io/OpalX/",
       image: "/opalx.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Ascend Properties Real Estate Platform",
-      summary:
-        "A full-featured real estate listing system with property search, filtering, admin dashboard, and Firebase backend for dynamic content management.",
-      linkSource: "https://github.com/Hikki-dev/ascendproperties-lk",
-      linkPreview: "https://ascendproperties-lk.vercel.app/",
-      image: "/ascend-properties.jpg",
-      technologies: ["React", "Firebase", "JavaScript", "TailwindCSS"],
-    },
-    {
-      name: "Buslink Transportation App",
-      summary:
-        "A Flutter-based bus management and live tracking system with Firestore integration, user-friendly UI, and real-time route updates for commuters and admins.",
-      linkSource: "https://github.com/Hikki-dev/Buslink",
-      linkPreview: "https://buslink-eta.vercel.app/",
-      image: "/buslink-app.jpg",
-      technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"],
     },
   ],
 
